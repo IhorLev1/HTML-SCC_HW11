@@ -1,0 +1,83 @@
+.footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer-box {
+  font-size: 14px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+}
+.footer-box__text {
+  margin: 0;
+}
+.form {
+  font-size: 0;
+  vertical-align: middle;
+}
+input {
+  font-size: 16px;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  vertical-align: middle;
+}
+input[type='email'] {
+  width: 230px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 1rem;
+}
+input[type='submit'] {
+  width: 152px;
+  height: 40px;
+  padding: 0;
+  background: var(--main);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Montserrat', serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #95e1d3;
+  cursor: pointer;
+}
+input::-webkit-input-placeholder {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+  color: #e7e7e7;
+}
+input::-moz-placeholder {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+  color: #e7e7e7;
+}
+input:-ms-input-placeholder {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+  color: #e7e7e7;
+}
+input::-ms-input-placeholder {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+  color: #e7e7e7;
+}
+input::placeholder {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-style: italic;
+  color: #e7e7e7;
+}
