@@ -31,11 +31,10 @@
 }
 
 .site-logo {
+  @include font(30px, 900);
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
+  font-family: $main-font;
   color: #ffffff;
-  font-weight: bold;
 }
 
 .list {
@@ -45,113 +44,97 @@
 }
 
 .page-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  @include flex(flex, space-between);
   align-items: center;
 }
 
 .site-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  @include flex(flex, space-between);
   width: 600px;
   padding-top: 15px;
+
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+  &__item svg {
+    display: block;
+    height: 16px;
+    width: 16px;
+    fill: #ffffff;
+  }
+  &__link {
+    @include font(14px);
+    text-decoration: none;
+    font-family: $main-font;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__item:after {
+    content: '';
+    display: block;
+    height: 3px;
+    background-color: rgb(252, 227, 138);
+    margin-top: 12px;
+    opacity: 0;
+  }
+  &__item:hover::after {
+    opacity: 1;
+    -webkit-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+  }
+  &__item:hover:last-child::after {
+    opacity: 0;
+  }
+  &__item:hover .site-navigation__link,
+  &__item:focus .site-navigation__link {
+    color: rgb(252, 227, 138);
+  }
 }
 
 .navigation {
   padding-top: 15px;
 }
-.site-navigation__icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-}
-.site-navigation__item svg {
-  display: block;
-  height: 16px;
-  width: 16px;
-  fill: #ffffff;
-}
+
 .shoping-card {
   padding-right: 42px;
-}
-.site-navigation__link {
-  text-decoration: none;
-  font-size: 14px;
-  font-family: 'Montserrat', sans-serif;
-  color: #ffffff;
-  text-transform: uppercase;
-  text-align: center;
-}
-.site-navigation__item:after {
-  content: '';
-  display: block;
-  height: 3px;
-  background-color: rgb(252, 227, 138);
-  margin-top: 12px;
-  opacity: 0;
-}
-.site-navigation__item:hover::after {
-  opacity: 1;
-  -webkit-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  transition: all 200ms linear;
-}
-.site-navigation__item:hover:last-child::after {
-  opacity: 0;
-}
-.site-navigation__item:hover .site-navigation__link,
-.site-navigation__item:focus .site-navigation__link {
-  color: rgb(252, 227, 138);
-}
-
-.section {
-  padding-top: 140px;
 }
 .titles {
   margin: 0;
   text-align: center;
 }
+.section {
+  padding-top: 140px;
 
-.section__subtitle {
-  font-family: 'Kaushan Script', sans-serif;
-  font-size: 72px;
-  color: #ffffff;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 60px;
-}
+  &__subtitle {
+    @include font(72px);
+    font-family: $third-font;
+    color: #ffffff;
+    margin-bottom: 60px;
+  }
 
-.section__title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 150px;
-  color: #ffffff;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 126px;
-  line-height: 0.933;
-}
+  &__title {
+    @include font(150px, 900, 0.933);
+    font-family: $main-font;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 126px;
+  }
 
-.section__button {
-  display: block;
-  margin: 0 auto;
-  background: none;
-  padding: 12px 30px;
-  border: 3px solid #ffffff;
-  color: #ffffff;
-  font-size: 14px;
-  font-family: 'Montserrat';
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
+  &__button {
+    @include font(14px, 900);
+    display: block;
+    margin: 0 auto;
+    background: none;
+    padding: 12px 30px;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    font-family: $main-font;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    cursor: pointer;
+  }
 }
